@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/jpg" href="favicon-16x16.png" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>Front-End</li>
+        <li>Atividade Js</li>
+        <li onclick="modalopen()">
+          <img src="perfil.svg" alt="" />
+        </li>
+      </ul>
+    </header>
+
+    <div id="id01" class="modal">
+      <form
+        class="modal-content animate"
+
+      >
+   
+        <div class="container">
+          <label for="uname">Nome</label>
+          <input type="text" placeholder="Nome " name="uname" required />
+
+          <label for="email">E-mail</label>
+          <input type="email" placeholder="e-mail" name="email" required />
+
+          <label for="tel">Telefone</label>
+          <input type="tel" placeholder="Telefone " name="tel" required />
+
+          <label for="CPF">CPF</label>
+          <input
+            type="text"
+            placeholder="Coloque seu Nome "
+            name="CPF"
+            required
+            oninput="fMasc( this, mCPF );"
+          />
+
+          <label for="psw">Password</label>
+          <input type="password" placeholder="Senha" name="psw" required />
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
